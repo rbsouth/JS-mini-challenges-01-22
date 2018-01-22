@@ -1,0 +1,8 @@
+class Multiplier {
+	multiply(){
+
+	}
+	getCurrentValue(){
+		
+	}
+}

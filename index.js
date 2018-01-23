@@ -80,6 +80,14 @@
 
 class Library {
 	constructor(book){
-	this.book = book
+	this.book = [];
+	}
+}
+
+class Book {
+	constructor(title, author, genre){
+		this.title = title
+		this.author = author
+		this.genre = genre
 	}
 }

@@ -43,7 +43,9 @@
 // 		console.log(this.photos);
 // 	}
 // 	listAllPhotos(){
-// 		console.log(this.photos);
+// 		for (var i = 0; i < this.photos.length; i++) {
+// 			console.log(this.photos[i].name)
+// 		}
 // 	}
 // 	selectPhoto(x){
 // 		console.log(this.photos[x]);
@@ -81,6 +83,10 @@
 class Library {
 	constructor(book){
 	this.book = [];
+	}
+	addBook(add_book) {
+		this.book.push(add_book)
+		console.log(this.book)
 	}
 }
 

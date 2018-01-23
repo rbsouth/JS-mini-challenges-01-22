@@ -8,22 +8,22 @@
 // 		this.current_value = this.current_value * this.number
 // 	 }
 // 	getCurrentValue(){
-// 		console.log(this.current_value);
+// 		this.current_value;
 // 	}
 // }
 
 // var new_number = new Multiplier(5);
 
 // new_number.multiply();
-// new_number.getCurrentValue();
+// console.log(new_number.getCurrentValue());
 // new_number.multiply();
-// new_number.getCurrentValue();
+// console.log(new_number.getCurrentValue());
 // new_number.multiply();
-// new_number.getCurrentValue();
+// console.log(new_number.getCurrentValue());
 // new_number.multiply();
-// new_number.getCurrentValue();
+// console.log(new_number.getCurrentValue();
 // new_number.multiply();
-// new_number.getCurrentValue();
+// console.log(new_number.getCurrentValue();
 
 
 //2. Create an Album object that can contain many Photo objects in its photos attribute. 
@@ -40,7 +40,6 @@
 // 	}
 // 	addPhoto(add_photo){
 // 		this.photos.push(add_photo);
-// 		console.log(this.photos);
 // 	}
 // 	listAllPhotos(){
 // 		for (var i = 0; i < this.photos.length; i++) {
@@ -48,7 +47,7 @@
 // 		}
 // 	}
 // 	selectPhoto(x){
-// 		console.log(this.photos[x]);
+// 		return this.photos[x];
 // 	}
 // }
 
@@ -70,7 +69,7 @@
 // album.addPhoto(spring_photo);
 // album.addPhoto(fall_photo);
 // album.listAllPhotos();
-// album.selectPhoto(2);
+// console.log(album.selectPhoto(2));
 
 // 3. Create a Library object that holds Book objects. 
 // The Library object can retrieve a book by title, 
@@ -86,7 +85,14 @@ class Library {
 	}
 	addBook(add_book) {
 		this.book.push(add_book)
-		console.log(this.book)
+	}
+	retrieveBook(book_title){
+		for (var i = 0; i < this.book.length; i++) {
+			this.book[i].title
+			if (this.book[i].title == book_title){
+				return this.book[i];
+			}
+		}
 	}
 }
 
@@ -97,3 +103,13 @@ class Book {
 		this.genre = genre
 	}
 }
+
+var library = new Library();
+var harry_potter = new Book('Harry Potter', 'J. K. Rowling', 'Fantasy');
+var socialism = new Book('The Problem With Socialism', 'Thomas J. DiLorenzo', 'Politics & Government');
+var sophies_world = new Book('Sophies World', 'Jostein Gaarder', 'Philosophy');
+
+library.addBook(harry_potter)
+library.addBook(socialism)
+library.addBook(sophies_world)
+console.log(library.retrieveBook('Harry Potter'))

@@ -1,29 +1,29 @@
 // //1.
-class Multiplier {
-	constructor(number, current_value){
-		this.number = number
-		this.current_value = 1
-	}
-	multiply() {
-		this.current_value = this.current_value * this.number
-	}
-	getCurrentValue() {
-		return this.current_value;
-	}
-}
+// class Multiplier {
+// 	constructor(number, current_value){
+// 		this.number = number
+// 		this.current_value = 1
+// 	}
+// 	multiply() {
+// 		this.current_value = this.current_value * this.number
+// 	}
+// 	getCurrentValue() {
+// 		return this.current_value;
+// 	}
+// }
 
-var new_number = new Multiplier(5);
+// var new_number = new Multiplier(5);
 
-new_number.multiply();
-console.log(new_number.getCurrentValue());
-new_number.multiply();
-console.log(new_number.getCurrentValue());
-new_number.multiply();
-console.log(new_number.getCurrentValue());
-new_number.multiply();
-console.log(new_number.getCurrentValue());
-new_number.multiply();
-console.log(new_number.getCurrentValue());
+// new_number.multiply();
+// console.log(new_number.getCurrentValue());
+// new_number.multiply();
+// console.log(new_number.getCurrentValue());
+// new_number.multiply();
+// console.log(new_number.getCurrentValue());
+// new_number.multiply();
+// console.log(new_number.getCurrentValue());
+// new_number.multiply();
+// console.log(new_number.getCurrentValue());
 
 
 //2. Create an Album object that can contain many Photo objects in its photos attribute. 
@@ -126,3 +126,48 @@ console.log(new_number.getCurrentValue());
 // console.log(library.retrieveBook('Harry Potter'));
 // library.removeBook('Harry Potter');
 // console.log(library.countBooks());
+
+// class Car {
+// 	constructor(name){
+// 	}
+// }
+
+// let car = new Car('Benz')
+
+// Car.prototype.becomeAUnicorn = function () {
+// 	console.log('I am a pretty unicorn');
+// }
+// car.becomeAUnicorn()
+
+Date.prototype.formattedDate = function() {
+	var month = ['January', 'February', 'March', 'April']
+	var todays_date = '';
+	var m = month[this.getMonth()];
+	var d = this.getDate();
+	var y = this.getFullYear();
+	todays_date = m +' '+ d +', '+ y;
+	return todays_date;
+}
+var date = new Date();
+console.log(date.formattedDate())
+
+Date.prototype.formattedTime = function() {
+	var time = ''
+	var h = this.getHours();
+	var m = this.getMinutes();
+	var s = this.getSeconds();
+	if (h < 10) {
+		h = '0' + h
+	}
+	if (m < 10) {
+		m = '0' + m
+	}
+	if (s < 10) {
+		s = '0' + s
+	}
+
+	time = h + ':' + m + ':' + s;
+	return time;
+}
+var now_time = new Date();
+console.log(now_time.formattedTime())
